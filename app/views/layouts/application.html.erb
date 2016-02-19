@@ -9,7 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div id="sidebar">
+
+
+	<!-- <div id="sidebar">
 		<div id="logo">
 			<%= link_to root_path do %>
 				<%= image_tag "logo.svg" %>
@@ -33,10 +35,11 @@
 		<% if !user_signed_in? %>
 			<p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
 		<% end %>
-	</div>
+	</div> -->
 
 	<div id="main_content">
 		<div id="header">
+		<!--
 			<% if current_page?(root_path) %>
 				<p>All Posts</p>
 			<% elsif current_page?(about_path) %>
@@ -44,11 +47,25 @@
 			<% else %>
 				<%= link_to "Back to All Posts", root_path %>
 			<% end %>
+		-->
+			<% if current_page?(root_path) %>
+				<p>All Posts</p>
+			<% elsif current_page?(about_path) %>
+				<p>About</p>
+			<% else %>
+				<%= link_to "Home", root_path %>
+			<% end %>
+
+			<% if !user_signed_in? %>
+				<div class="buttons">
+				<button class="button"><%= link_to "Sign Up", new_user_session_path %></button>
+				</div>
+			<% end %>
 
 			<% if user_signed_in? %>
 				<div class="buttons">
 					<button class="button"><%= link_to "New Post", new_post_path %></button>
-					<button class="button">Log Out</button>
+					<button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
 				</div>
 			<% end %>
 		</div>
