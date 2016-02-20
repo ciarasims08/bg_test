@@ -1,0 +1,20 @@
+<html>
+<head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	
+	<%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link rel="stylesheet" type="text/css" href="pages.css.scss">
+
+</head>
+
+<body id="test">
+	
+
+	<div id="footer">
+		<button id="signup-btn" class="btn btn-default btn-lg"><%= link_to "Sign Up", new_user_session_path %></button>
+		<p id="login-btn">Already have an account? <a id="login"></a><%= link_to "Log in", new_user_session_path %></p>
+	</div>
+
+</body>
+</html>

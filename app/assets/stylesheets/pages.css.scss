@@ -1,3 +1,38 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#test { 
+  background: url("./bg_site.JPG") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#signup-btn {
+	position: absolute;
+	left: 28%;
+	top: 85%;
+	width: 230px;
+	
+	background-color: #1da1f2;
+	color: white;
+	border: none;
+	text-align: center;
+}
+
+#login-btn {
+	position: absolute;
+	left: 30%;
+	top: 92%;
+	
+	color: white;
+}
+
+#login-btn a {
+	color: #1da1f2;
+}

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   root "posts#index"
-
+  get '/first', to: 'pages#splashscreen'
   get '/about', to: 'pages#about'
 
 end
