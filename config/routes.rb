@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   	resources :comments
   end
 
-  root "posts#index"
-  get '/first', to: 'pages#splashscreen'
+  root "pages#splashscreen"
+#  get '/first', to: 'pages#splashscreen'
   get '/about', to: 'pages#about'
 
 end
